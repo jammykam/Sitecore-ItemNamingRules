@@ -1,26 +1,33 @@
 ----item----
 version: 1
-id: {885D3F46-B084-4746-AE04-FE411FDCE385}
+id: {86E2276A-437F-492F-B1B9-CEDBB3B9DA88}
 database: master
-path: /sitecore/system/Settings/Rules/Common/Conditions
-parent: {07674D37-902B-4FE5-90AB-A586075A0FAD}
-name: Conditions
+path: /sitecore/system/Settings/Rules/Item Saved/Rules
+parent: {9046EC11-21C1-4828-A799-9C4B7D8C8673}
+name: Rules
 master: {00000000-0000-0000-0000-000000000000}
-template: {A87A00B1-E6DB-45AB-8B54-636FEC3B5523}
-templatekey: Folder
+template: {8EA2CF67-4250-47A2-AECA-4F70FD200DC7}
+templatekey: Rules Folder
 
+----field----
+field: {1172F251-DAD4-4EFB-A329-0C63500E4F1E}
+name: __Masters
+key: __masters
+content-length: 38
+
+{D9BDF22F-6E17-47F3-AB64-49C717BA92DA}
 ----version----
 language: da
 version: 1
-revision: eae5b9cf-c2c2-4e21-9253-37bba3f0e3a4
+revision: 06c6bf52-2963-458f-8ccd-553920e4d4f0
 
 ----field----
 field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
 name: __Display name
 key: __display name
-content-length: 11
+content-length: 6
 
-Betingelser
+Regler
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -32,9 +39,9 @@ sitecore\admin
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
 key: __created
-content-length: 34
+content-length: 35
 
-20130424T124548:635024043489116622
+20150427T173514:635657529147217166Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -48,14 +55,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-eae5b9cf-c2c2-4e21-9253-37bba3f0e3a4
+06c6bf52-2963-458f-8ccd-553920e4d4f0
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
-content-length: 34
+content-length: 35
 
-20130424T124548:635024043489116622
+20150427T180331:635657546117903063Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
@@ -66,15 +73,15 @@ sitecore\admin
 ----version----
 language: de-DE
 version: 1
-revision: 7b0d7b35-df8f-46c7-9c2d-4bc0679f3dda
+revision: 8041de80-4230-4d85-9592-d5ce3074aee8
 
 ----field----
 field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
 name: __Display name
 key: __display name
-content-length: 11
+content-length: 5
 
-Bedingungen
+Regel
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -86,9 +93,9 @@ sitecore\admin
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
 key: __created
-content-length: 34
+content-length: 35
 
-20130424T130953:635024057936825842
+20150427T174438:635657534783037660Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -102,14 +109,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-7b0d7b35-df8f-46c7-9c2d-4bc0679f3dda
+8041de80-4230-4d85-9592-d5ce3074aee8
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
-content-length: 34
+content-length: 35
 
-20130424T130953:635024057936825842
+20150427T181105:635657550651371983Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
@@ -120,7 +127,7 @@ sitecore\admin
 ----version----
 language: en
 version: 1
-revision: b180cfad-b4ec-40d4-a8db-548665862894
+revision: 3a80f0a7-9cd0-4686-af20-2401200b22ec
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -135,7 +142,7 @@ name: __Created
 key: __created
 content-length: 15
 
-20080923T084009
+20081128T104301
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -149,14 +156,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-b180cfad-b4ec-40d4-a8db-548665862894
+3a80f0a7-9cd0-4686-af20-2401200b22ec
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 34
 
-20080923T084028:633577560280317205
+20120907T170225:634826341452266750
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
@@ -167,15 +174,15 @@ sitecore\admin
 ----version----
 language: ja-JP
 version: 1
-revision: 434ac097-5044-426f-8100-43d7c04b572e
+revision: 5597f32e-869e-4fc6-aaf5-3bf98c4add79
 
 ----field----
 field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
 name: __Display name
 key: __display name
-content-length: 2
+content-length: 3
 
-条件
+ルール
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -187,9 +194,9 @@ sitecore\admin
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
 key: __created
-content-length: 34
+content-length: 35
 
-20130424T133345:635024072254516669
+20150427T175329:635657540090726536Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -203,14 +210,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-434ac097-5044-426f-8100-43d7c04b572e
+5597f32e-869e-4fc6-aaf5-3bf98c4add79
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
-content-length: 34
+content-length: 35
 
-20130424T133345:635024072254516669
+20150427T180719:635657548394157746Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

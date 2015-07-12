@@ -1,33 +1,26 @@
 ----item----
 version: 1
-id: {94D909C0-934D-4E66-905E-6604615F9800}
+id: {957140FB-4954-49C7-A73C-8BEDF10D084E}
 database: master
-path: /sitecore/system/Settings/Rules/Common/Actions/Lowercase Item Name
-parent: {5495ED07-AB27-4864-9ADF-5B1A831A7FB3}
-name: Lowercase Item Name
+path: /sitecore/system/Settings/Rules/Definitions/Tags/Item Naming
+parent: {DADB4F93-477F-491F-A905-C4005C452E67}
+name: Item Naming
 master: {00000000-0000-0000-0000-000000000000}
-template: {F90052A5-B4E6-4E6D-9812-1E1B88A6FCEA}
-templatekey: Action
+template: {1A9B6300-4652-477C-A4B5-B2A64E86B29F}
+templatekey: Tag
 
 ----field----
-field: {FF55D5A7-6D4B-4CD1-83E0-BAC268073F66}
-name: Type
-key: type
-content-length: 94
+field: {F6D8A61C-2F84-4401-BD24-52D2068172BC}
+name: __Originator
+key: __originator
+content-length: 0
 
-Sitecore.Sharedsource.ItemNamingRules.Actions.Lowercase, Sitecore.Sharedsource.ItemNamingRules
+
 ----version----
 language: en
 version: 1
-revision: dc162d57-2430-4289-a956-14c25be8d828
+revision: 58ac56f1-9a03-47dc-8856-62a08e3ae2fd
 
-----field----
-field: {EEB36A3B-40D9-4AF5-862A-DE257B84DCA3}
-name: Text
-key: text
-content-length: 17
-
-lowercase letters
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -39,9 +32,9 @@ sitecore\admin
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
 key: __created
-content-length: 15
+content-length: 16
 
-20130625T102610
+20150401T233520Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -55,18 +48,18 @@ name: __Revision
 key: __revision
 content-length: 36
 
-dc162d57-2430-4289-a956-14c25be8d828
+58ac56f1-9a03-47dc-8856-62a08e3ae2fd
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
-content-length: 34
+content-length: 35
 
-20130625T114112:635077572720897673
+20150401T233520:635635281201263895Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
 key: __updated by
 content-length: 14
 
-sitecore\Admin
+sitecore\admin

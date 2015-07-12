@@ -1,10 +1,10 @@
 ----item----
 version: 1
-id: {A951E10C-1D0E-4024-BA51-61D19C6F64ED}
+id: {2A1CB91D-C87B-4120-8279-888938FCB498}
 database: master
-path: /sitecore/system/Settings/Rules/Common/Actions/Replace Invalid Characters in Item Name
-parent: {5495ED07-AB27-4864-9ADF-5B1A831A7FB3}
-name: Replace Invalid Characters in Item Name
+path: /sitecore/system/Settings/Rules/Definitions/Elements/Item Naming/Lowercase Item Name
+parent: {A5BFD2FC-9B28-434D-B858-77125D34174A}
+name: Lowercase Item Name
 master: {00000000-0000-0000-0000-000000000000}
 template: {F90052A5-B4E6-4E6D-9812-1E1B88A6FCEA}
 templatekey: Action
@@ -13,21 +13,21 @@ templatekey: Action
 field: {FF55D5A7-6D4B-4CD1-83E0-BAC268073F66}
 name: Type
 key: type
-content-length: 109
+content-length: 94
 
-Sitecore.Sharedsource.ItemNamingRules.Actions.ReplaceInvalidCharacters, Sitecore.Sharedsource.ItemNamingRules
+Sitecore.Sharedsource.ItemNamingRules.Actions.Lowercase, Sitecore.Sharedsource.ItemNamingRules
 ----version----
 language: en
 version: 1
-revision: b3366a7e-e6c0-4e9a-8c8e-6d2d98ae9a55
+revision: f0c053da-9e11-4114-ad9a-4cb3676f1691
 
 ----field----
 field: {EEB36A3B-40D9-4AF5-862A-DE257B84DCA3}
 name: Text
 key: text
-content-length: 154
+content-length: 28
 
-replace characters in the item name that do not match the regular expression [MatchPattern,Text,,pattern] with [ReplaceWith,Text,,this character sequence]
+convert to lowercase letters
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -39,9 +39,9 @@ sitecore\admin
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
 key: __created
-content-length: 15
+content-length: 16
 
-20130625T102610
+20150402T000911Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -55,18 +55,18 @@ name: __Revision
 key: __revision
 content-length: 36
 
-b3366a7e-e6c0-4e9a-8c8e-6d2d98ae9a55
+f0c053da-9e11-4114-ad9a-4cb3676f1691
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
-content-length: 34
+content-length: 35
 
-20130625T114018:635077572184564045
+20150712T010128:635722596884401284Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
 key: __updated by
 content-length: 14
 
-sitecore\Admin
+sitecore\admin

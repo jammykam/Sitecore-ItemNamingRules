@@ -1,40 +1,33 @@
 ----item----
 version: 1
-id: {1AEE16C7-F2C1-4C27-9790-63A4F0E3D2AF}
+id: {FC8CC955-094D-42A7-8B21-A7F09FEF79C2}
 database: master
-path: /sitecore/system/Settings/Rules/Common/Conditions/Presentation/Has Layout Details For Any Device
-parent: {C14D9106-92E0-4F8C-9728-9FDD99CB8EBA}
-name: Has Layout Details For Any Device
-master: {00000000-0000-0000-0000-000000000000}
-template: {F0D16EEE-3A05-4E43-A082-795A32B873C0}
-templatekey: Condition
+path: /sitecore/system/Settings/Rules/Item Saved/Tags
+parent: {9046EC11-21C1-4828-A799-9C4B7D8C8673}
+name: Tags
+master: {DD67A88F-282C-454F-AADD-1A6339FD6844}
+template: {96C8E5DD-63C3-496B-A97C-A3E37E1DACBA}
+templatekey: Tags Definitions Folder
 
 ----field----
-field: {AB51C8B2-F0E1-4471-9AAE-CC080D774923}
-name: Type
-key: type
-content-length: 116
+field: {F6D8A61C-2F84-4401-BD24-52D2068172BC}
+name: __Originator
+key: __originator
+content-length: 0
 
-Sitecore.Sharedsource.ItemNamingRules.Conditions.HasLayoutDetailsForAnyDevice, Sitecore.Sharedsource.ItemNamingRules
+
 ----version----
 language: da
 version: 1
-revision: 071bbcb0-4c7d-43b6-8c89-f821eefa112b
+revision: a8090cac-2dc2-4553-a5a4-62f90cd29702
 
-----field----
-field: {AF321234-4EB9-4EF5-9197-65903351939C}
-name: Text
-key: text
-content-length: 75
-
-når elementet er et overliggende element til [itemid,Tree,,a specific item]
 ----field----
 field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
 name: __Display name
 key: __display name
-content-length: 25
+content-length: 4
 
-Overordnet eller sig selv
+Tags
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -46,9 +39,9 @@ sitecore\admin
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
 key: __created
-content-length: 34
+content-length: 35
 
-20130424T124331:635024042114205804
+20150427T173601:635657529618941670Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -62,14 +55,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-071bbcb0-4c7d-43b6-8c89-f821eefa112b
+a8090cac-2dc2-4553-a5a4-62f90cd29702
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
-content-length: 34
+content-length: 35
 
-20130424T124331:635024042115299372
+20150427T180353:635657546335712441Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
@@ -80,22 +73,15 @@ sitecore\admin
 ----version----
 language: de-DE
 version: 1
-revision: 0e6a549e-443b-452d-8b53-80a7db5c59d3
+revision: 30c60429-11ba-43bb-b149-4bdd9775d711
 
-----field----
-field: {AF321234-4EB9-4EF5-9197-65903351939C}
-name: Text
-key: text
-content-length: 69
-
-wo das Item Vorgänger ist eines [itemid,Tree,,spezifischen Items] ist
 ----field----
 field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
 name: __Display name
 key: __display name
-content-length: 21
+content-length: 4
 
-Vorgänger oder Selbst
+Tags
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -107,9 +93,9 @@ sitecore\admin
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
 key: __created
-content-length: 34
+content-length: 35
 
-20130424T130748:635024056681957591
+20150427T174538:635657535380378611Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -123,14 +109,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-0e6a549e-443b-452d-8b53-80a7db5c59d3
+30c60429-11ba-43bb-b149-4bdd9775d711
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
-content-length: 34
+content-length: 35
 
-20130424T130748:635024056682426230
+20150427T181124:635657550849654854Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
@@ -141,15 +127,8 @@ sitecore\admin
 ----version----
 language: en
 version: 1
-revision: 3943205f-8d98-4cf7-8cfd-0772d6108a32
+revision: 6cf5d923-a62f-4a4e-a7d0-39731d1174dd
 
-----field----
-field: {AF321234-4EB9-4EF5-9197-65903351939C}
-name: Text
-key: text
-content-length: 47
-
-when the item has layout details for any device
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -163,7 +142,7 @@ name: __Created
 key: __created
 content-length: 15
 
-20080923T083922
+20120807T142855
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -177,40 +156,33 @@ name: __Revision
 key: __revision
 content-length: 36
 
-3943205f-8d98-4cf7-8cfd-0772d6108a32
+6cf5d923-a62f-4a4e-a7d0-39731d1174dd
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 34
 
-20130625T111040:635077554404116178
+20120807T142855:634799465353405250
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
 key: __updated by
 content-length: 14
 
-sitecore\Admin
+sitecore\admin
 ----version----
 language: ja-JP
 version: 1
-revision: ec96697d-ef0c-4ac2-98cd-05d5bef47ff1
+revision: a4828d7f-8dfe-4d01-8751-7d0391a1dd0c
 
-----field----
-field: {AF321234-4EB9-4EF5-9197-65903351939C}
-name: Text
-key: text
-content-length: 50
-
-条件： （アイテム Path） アイテムが [itemid,Tree,,特定のアイテム] の親の場合
 ----field----
 field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
 name: __Display name
 key: __display name
-content-length: 6
+content-length: 2
 
-親または自身
+タグ
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -222,9 +194,9 @@ sitecore\admin
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
 key: __created
-content-length: 34
+content-length: 35
 
-20130424T133050:635024070501248514
+20150427T175425:635657540659942250Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -238,14 +210,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-ec96697d-ef0c-4ac2-98cd-05d5bef47ff1
+a4828d7f-8dfe-4d01-8751-7d0391a1dd0c
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
-content-length: 34
+content-length: 35
 
-20130424T133050:635024070502342075
+20150427T180739:635657548591032521Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

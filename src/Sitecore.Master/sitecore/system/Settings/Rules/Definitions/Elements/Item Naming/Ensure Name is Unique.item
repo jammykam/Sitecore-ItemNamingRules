@@ -1,10 +1,10 @@
 ----item----
 version: 1
-id: {3E76C52C-133D-40F3-8B38-421F56E1019A}
+id: {A636CD38-32AD-4762-9434-E5932FE250F5}
 database: master
-path: /sitecore/system/Settings/Rules/Common/Actions/Ensure Item Name is Unique
-parent: {5495ED07-AB27-4864-9ADF-5B1A831A7FB3}
-name: Ensure Item Name is Unique
+path: /sitecore/system/Settings/Rules/Definitions/Elements/Item Naming/Ensure Name is Unique
+parent: {A5BFD2FC-9B28-434D-B858-77125D34174A}
+name: Ensure Name is Unique
 master: {00000000-0000-0000-0000-000000000000}
 template: {F90052A5-B4E6-4E6D-9812-1E1B88A6FCEA}
 templatekey: Action
@@ -19,15 +19,15 @@ Sitecore.Sharedsource.ItemNamingRules.Actions.EnsureUnique, Sitecore.Sharedsourc
 ----version----
 language: en
 version: 1
-revision: 14f4f470-b596-4a23-a7dd-1852b4f4b6bb
+revision: a4016322-34ee-4a98-9964-c4269043fbf6
 
 ----field----
 field: {EEB36A3B-40D9-4AF5-862A-DE257B84DCA3}
 name: Text
 key: text
-content-length: 89
+content-length: 26
 
-ensure item name is unique and does not exceed [MaxLength,int,,maximum length] characters
+ensure item name is unique
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -39,9 +39,9 @@ sitecore\admin
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
 key: __created
-content-length: 15
+content-length: 16
 
-20130625T102610
+20150402T000646Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -55,18 +55,18 @@ name: __Revision
 key: __revision
 content-length: 36
 
-14f4f470-b596-4a23-a7dd-1852b4f4b6bb
+a4016322-34ee-4a98-9964-c4269043fbf6
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
-content-length: 34
+content-length: 35
 
-20130625T114057:635077572572662851
+20150712T010115:635722596757046969Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
 key: __updated by
 content-length: 14
 
-sitecore\Admin
+sitecore\admin
