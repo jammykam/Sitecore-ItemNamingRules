@@ -13,10 +13,11 @@
 // <url>http://marketplace.sitecore.net/en/Modules/Item_Naming_rules.aspx</url>
 //-----------------------------------------------------------------------------------
 
+using Sitecore.Rules;
+using Sitecore.Rules.Conditions;
+
 namespace Sitecore.Sharedsource.ItemNamingRules.Conditions
 {
-    using Sitecore.Rules;
-    using Sitecore.Rules.Conditions;
 
     /// <summary>
     /// Rules engine condition to determine if an item has 

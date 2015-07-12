@@ -1,160 +1,169 @@
-﻿<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-    <PropertyGroup>
-        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-        <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-        <ProductVersion>9.0.21022</ProductVersion>
-        <SchemaVersion>2.0</SchemaVersion>
-        <ProjectGuid>92d5ee43-ee6f-48e9-b2b3-93c524d001a0</ProjectGuid>
-        <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
-        <SourceWebPhysicalPath>..\ItemNamingRules</SourceWebPhysicalPath>
-        <SourceWebProject>{eaeb63b0-f73d-45ce-93ed-8be129fa3e99}|ItemNamingRules\ItemNamingRules.csproj</SourceWebProject>
-        <SourceWebVirtualPath>/ItemNamingRules.csproj</SourceWebVirtualPath>
-        <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
-        <EnableUpdateable>true</EnableUpdateable>
-        <UseMerge>true</UseMerge>
-        <SingleAssemblyName>Sitecore.Master</SingleAssemblyName>
-        <UseWebConfigReplacement>false</UseWebConfigReplacement>
-        <DeleteAppCodeCompiledFiles>true</DeleteAppCodeCompiledFiles>
-        <LegacyFileReplacement>false</LegacyFileReplacement>
-        <AssemblyName>Sitecore.Master</AssemblyName>
-        <Name>ItemNamingRules.Sitecore.Master</Name>
-        <RootNamespace>Sitecore.Master</RootNamespace>
-        <SitecoreDatabase>master</SitecoreDatabase>
-    </PropertyGroup>
-    <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
-        <DebugSymbols>true</DebugSymbols>
-        <OutputPath>.\bin\Debug\</OutputPath>
-        <RecursiveDeployAction>Ignore</RecursiveDeployAction>
-        <SitecoreDeployFolder>
-        </SitecoreDeployFolder>
-        <SitecoreWebUrl>
-        </SitecoreWebUrl>
-        <SitecoreAccessGuid>
-        </SitecoreAccessGuid>
-        <InstallSitecoreConnector>False</InstallSitecoreConnector>
-    </PropertyGroup>
-    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
-        <DebugSymbols>false</DebugSymbols>
-        <OutputPath>.\bin\Release\</OutputPath>
-        <RecursiveDeployAction>Ignore</RecursiveDeployAction>
-        <SitecoreDeployFolder>
-        </SitecoreDeployFolder>
-        <SitecoreWebUrl>
-        </SitecoreWebUrl>
-        <SitecoreAccessGuid>
-        </SitecoreAccessGuid>
-        <InstallSitecoreConnector>False</InstallSitecoreConnector>
-        <PackageAuthor>Hedgehog Development</PackageAuthor>
-        <PackagePublisher>Hedgehog Development</PackagePublisher>
-        <PackageVersion>1.0</PackageVersion>
-        <PackageReadme>
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>92d5ee43-ee6f-48e9-b2b3-93c524d001a0</ProjectGuid>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <SourceWebPhysicalPath>..\ItemNamingRules</SourceWebPhysicalPath>
+    <SourceWebProject>{eaeb63b0-f73d-45ce-93ed-8be129fa3e99}|ItemNamingRules\ItemNamingRules.csproj</SourceWebProject>
+    <SourceWebVirtualPath>/ItemNamingRules.csproj</SourceWebVirtualPath>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <EnableUpdateable>true</EnableUpdateable>
+    <UseMerge>true</UseMerge>
+    <SingleAssemblyName>Sitecore.Master</SingleAssemblyName>
+    <UseWebConfigReplacement>false</UseWebConfigReplacement>
+    <DeleteAppCodeCompiledFiles>true</DeleteAppCodeCompiledFiles>
+    <LegacyFileReplacement>false</LegacyFileReplacement>
+    <AssemblyName>Sitecore.Master</AssemblyName>
+    <Name>ItemNamingRules.Sitecore.Master</Name>
+    <RootNamespace>Sitecore.Master</RootNamespace>
+    <SitecoreDatabase>master</SitecoreDatabase>
+    <EnableCodeGeneration>false</EnableCodeGeneration>
+    <ManageRoles>False</ManageRoles>
+    <AssemblyStatus>Exclude</AssemblyStatus>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>.\bin\Debug\</OutputPath>
+    <RecursiveDeployAction>Ignore</RecursiveDeployAction>
+    <SitecoreDeployFolder>
+    </SitecoreDeployFolder>
+    <SitecoreWebUrl>
+    </SitecoreWebUrl>
+    <SitecoreAccessGuid>
+    </SitecoreAccessGuid>
+    <InstallSitecoreConnector>False</InstallSitecoreConnector>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+    <OutputPath>.\bin\Release\</OutputPath>
+    <RecursiveDeployAction>Ignore</RecursiveDeployAction>
+    <SitecoreDeployFolder>
+    </SitecoreDeployFolder>
+    <SitecoreWebUrl>
+    </SitecoreWebUrl>
+    <SitecoreAccessGuid>
+    </SitecoreAccessGuid>
+    <InstallSitecoreConnector>False</InstallSitecoreConnector>
+    <PackageAuthor>Hedgehog Development</PackageAuthor>
+    <PackagePublisher>Hedgehog Development</PackagePublisher>
+    <PackageVersion>1.0</PackageVersion>
+    <PackageReadme>
             The ItemNamingRules project provides conditions and actions for the rules engine to automate item name conventions. You can use the ItemNamingRules project to apply different item naming rules in different branches of the content tree. For more information about the rules engine, see the Rules Engine Cookbook.
 
             https://github.com/seankearney/Sitecore-ItemNamingRules
 
         </PackageReadme>
-        <SitecoreAssemblyPath>..\..\lib\</SitecoreAssemblyPath>
-        <GeneratePackage>True</GeneratePackage>
-        <SeperateFilesAndItems>False</SeperateFilesAndItems>
-        <AddDateTimeToPackageName>False</AddDateTimeToPackageName>
+    <SitecoreAssemblyPath>..\..\lib\</SitecoreAssemblyPath>
+    <GeneratePackage>True</GeneratePackage>
+    <SeperateFilesAndItems>False</SeperateFilesAndItems>
+    <AddDateTimeToPackageName>False</AddDateTimeToPackageName>
+  </PropertyGroup>
+  <ItemGroup>
+    <AssemblyAttributes Include="AssemblyFileVersion">
+      <Value>$(AssemblyFileVersion)</Value>
+    </AssemblyAttributes>
+    <AssemblyAttributes Include="AssemblyVersion">
+      <Value>$(AssemblyVersion)</Value>
+    </AssemblyAttributes>
+  </ItemGroup>
+  <ItemGroup>
+    <SitecoreItem Include="sitecore\system.item">
+      <Icon>/temp/IconCache/People/16x16/workstation1.png</Icon>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+      <ItemDeployment>DeployOnce</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings.item">
+      <Icon>/temp/IconCache/Applications/16x16/preferences.png</Icon>
+      <ItemDeployment>DeployOnce</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Rules.item">
+      <Icon>/temp/IconCache/Applications/16x16/folder.png</Icon>
+      <ItemDeployment>DeployOnce</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Rules\Common.item">
+      <Icon>/temp/IconCache/Applications/16x16/folder.png</Icon>
+      <ItemDeployment>DeployOnce</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Rules\Common\Actions.item">
+      <Icon>/temp/IconCache/Applications/16x16/folder.png</Icon>
+      <ItemDeployment>DeployOnce</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Rules\Common\Actions\Ensure Item Name is Unique.item">
+      <Icon>/temp/IconCache/Software/32x32/shape_rectangle.png</Icon>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Rules\Common\Actions\Ensure Minimum Length of Item Name.item">
+      <Icon>/temp/IconCache/Software/32x32/shape_rectangle.png</Icon>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Rules\Common\Actions\Lowercase Item Name.item">
+      <Icon>/temp/IconCache/Software/32x32/shape_rectangle.png</Icon>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Rules\Common\Actions\Replace Invalid Characters in Item Name.item">
+      <Icon>/temp/IconCache/Software/32x32/shape_rectangle.png</Icon>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Rules\Common\Conditions.item">
+      <Icon>/temp/IconCache/Applications/16x16/folder.png</Icon>
+      <ItemDeployment>DeployOnce</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Rules\Common\Conditions\Presentation.item">
+      <Icon>/temp/IconCache/Applications/16x16/folder.png</Icon>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Rules\Common\Conditions\Presentation\Has Layout Details For Any Device.item">
+      <Icon>/temp/IconCache/Software/32x32/shape_rhomb.png</Icon>
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Rules\Common\Conditions\Presentation\Has Layout Details For Default Device.item">
+      <Icon>/temp/IconCache/Software/32x32/shape_rhomb.png</Icon>
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ItemNamingRules\ItemNamingRules.csproj">
+      <Project>{eaeb63b0-f73d-45ce-93ed-8be129fa3e99}</Project>
+      <Name>ItemNamingRules</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ExcludedAssemblies Include="Sitecore.Kernel.dll" />
+    <ExcludedAssemblies Include="Sitecore.Logging.dll" />
+    <ExcludedAssemblies Include="Sitecore.Update.dll" />
+    <ExcludedAssemblies Include="Sitecore.Zip.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\HedgehogDevelopment\SitecoreProject\v9.0\HedgehogDevelopment.SitecoreProject.targets" />
+  <!-- After the package is generated, copy it up to the /trunk/release directory -->
+  <Target Name="AfterGeneratePackage" Condition=" '$(Configuration)' == 'Release' ">
+    <PropertyGroup>
+      <!-- calculate the package directory-->
+      <_PackageOutputDirectory Condition="'$(OutDir)' != '$(OutputPath)' and '$(OutDir)' != ''">$(OutDir)_Packages\$(MSBuildProjectName)\</_PackageOutputDirectory>
+      <_PackageOutputDirectory Condition="'$(OutDir)' == '$(OutputPath)' or '$(OutDir)' == ''">$(OutputPath)..\Package_$(Configuration)\</_PackageOutputDirectory>
+      <_CopyPath>..\..\release</_CopyPath>
     </PropertyGroup>
+    <!-- Grab the packages -->
     <ItemGroup>
-        <AssemblyAttributes Include="AssemblyFileVersion">
-            <Value>$(AssemblyFileVersion)</Value>
-        </AssemblyAttributes>
-        <AssemblyAttributes Include="AssemblyVersion">
-            <Value>$(AssemblyVersion)</Value>
-        </AssemblyAttributes>
+      <_OutputFiles Include="$(_PackageOutputDirectory)\**\*.*" />
     </ItemGroup>
-    <ItemGroup>
-        <SitecoreItem Include="sitecore\system.item">
-            <Icon>/temp/IconCache/People/16x16/workstation1.png</Icon>
-            <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
-            <ItemDeployment>DeployOnce</ItemDeployment>
-        </SitecoreItem>
-        <SitecoreItem Include="sitecore\system\Settings.item">
-            <Icon>/temp/IconCache/Applications/16x16/preferences.png</Icon>
-            <ItemDeployment>DeployOnce</ItemDeployment>
-            <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
-        </SitecoreItem>
-        <SitecoreItem Include="sitecore\system\Settings\Rules.item">
-            <Icon>/temp/IconCache/Applications/16x16/folder.png</Icon>
-            <ItemDeployment>DeployOnce</ItemDeployment>
-            <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
-        </SitecoreItem>
-        <SitecoreItem Include="sitecore\system\Settings\Rules\Common.item">
-            <Icon>/temp/IconCache/Applications/16x16/folder.png</Icon>
-            <ItemDeployment>DeployOnce</ItemDeployment>
-            <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
-        </SitecoreItem>
-        <SitecoreItem Include="sitecore\system\Settings\Rules\Common\Actions.item">
-            <Icon>/temp/IconCache/Applications/16x16/folder.png</Icon>
-            <ItemDeployment>DeployOnce</ItemDeployment>
-            <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
-        </SitecoreItem>
-        <SitecoreItem Include="sitecore\system\Settings\Rules\Common\Actions\Ensure Item Name is Unique.item">
-            <Icon>/temp/IconCache/Software/32x32/shape_rectangle.png</Icon>
-            <ItemDeployment>AlwaysUpdate</ItemDeployment>
-            <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
-        </SitecoreItem>
-        <SitecoreItem Include="sitecore\system\Settings\Rules\Common\Actions\Ensure Minimum Length of Item Name.item">
-            <Icon>/temp/IconCache/Software/32x32/shape_rectangle.png</Icon>
-            <ItemDeployment>AlwaysUpdate</ItemDeployment>
-            <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
-        </SitecoreItem>
-        <SitecoreItem Include="sitecore\system\Settings\Rules\Common\Actions\Lowercase Item Name.item">
-            <Icon>/temp/IconCache/Software/32x32/shape_rectangle.png</Icon>
-            <ItemDeployment>AlwaysUpdate</ItemDeployment>
-            <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
-        </SitecoreItem>
-        <SitecoreItem Include="sitecore\system\Settings\Rules\Common\Actions\Replace Invalid Characters in Item Name.item">
-            <Icon>/temp/IconCache/Software/32x32/shape_rectangle.png</Icon>
-            <ItemDeployment>AlwaysUpdate</ItemDeployment>
-            <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
-        </SitecoreItem>
-        <SitecoreItem Include="sitecore\system\Settings\Rules\Common\Conditions.item">
-            <Icon>/temp/IconCache/Applications/16x16/folder.png</Icon>
-            <ItemDeployment>DeployOnce</ItemDeployment>
-            <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
-        </SitecoreItem>
-        <SitecoreItem Include="sitecore\system\Settings\Rules\Common\Conditions\Presentation.item">
-            <Icon>/temp/IconCache/Applications/16x16/folder.png</Icon>
-            <ItemDeployment>AlwaysUpdate</ItemDeployment>
-            <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
-        </SitecoreItem>
-        <SitecoreItem Include="sitecore\system\Settings\Rules\Common\Conditions\Presentation\Has Layout Details For Any Device.item">
-            <Icon>/temp/IconCache/Software/32x32/shape_rhomb.png</Icon>
-            <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
-            <ItemDeployment>AlwaysUpdate</ItemDeployment>
-        </SitecoreItem>
-        <SitecoreItem Include="sitecore\system\Settings\Rules\Common\Conditions\Presentation\Has Layout Details For Default Device.item">
-            <Icon>/temp/IconCache/Software/32x32/shape_rhomb.png</Icon>
-            <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
-            <ItemDeployment>AlwaysUpdate</ItemDeployment>
-        </SitecoreItem>
-    </ItemGroup>
-    <ItemGroup>
-        <ExcludedAssemblies Include="Sitecore.Kernel.dll" />
-        <ExcludedAssemblies Include="Sitecore.Logging.dll" />
-        <ExcludedAssemblies Include="Sitecore.Update.dll" />
-        <ExcludedAssemblies Include="Sitecore.Zip.dll" />
-    </ItemGroup>
-    <Import Project="$(MSBuildExtensionsPath)\HedgehogDevelopment\SitecoreProject\v9.0\HedgehogDevelopment.SitecoreProject.targets" />
-    <!-- After the package is generated, copy it up to the /trunk/release directory -->
-    <Target Name="AfterGeneratePackage" Condition=" '$(Configuration)' == 'Release' ">
-        <PropertyGroup>
-            <!-- calculate the package directory-->
-            <_PackageOutputDirectory Condition="'$(OutDir)' != '$(OutputPath)' and '$(OutDir)' != ''">$(OutDir)_Packages\$(MSBuildProjectName)\</_PackageOutputDirectory>
-            <_PackageOutputDirectory Condition="'$(OutDir)' == '$(OutputPath)' or '$(OutDir)' == ''">$(OutputPath)..\Package_$(Configuration)\</_PackageOutputDirectory>
-            <_CopyPath>..\..\release</_CopyPath>
-        </PropertyGroup>
-        <!-- Grab the packages -->
-        <ItemGroup>
-            <_OutputFiles Include="$(_PackageOutputDirectory)\**\*.*" />
-        </ItemGroup>
-        <!-- write a message to output window -->
-        <Message Text="Copying package from $(_PackageOutputDirectory) to $(_CopyPath)" Importance="high" />
-        <!-- perform the copy -->
-        <Copy SourceFiles="@(_OutputFiles)" DestinationFiles="@(_OutputFiles -> '$(_CopyPath)\%(RecursiveDir)\%(FileName)%(Extension)')" />
-    </Target>
+    <!-- write a message to output window -->
+    <Message Text="Copying package from $(_PackageOutputDirectory) to $(_CopyPath)" Importance="high" />
+    <!-- perform the copy -->
+    <Copy SourceFiles="@(_OutputFiles)" DestinationFiles="@(_OutputFiles -> '$(_CopyPath)\%(RecursiveDir)\%(FileName)%(Extension)')" />
+  </Target>
 </Project>

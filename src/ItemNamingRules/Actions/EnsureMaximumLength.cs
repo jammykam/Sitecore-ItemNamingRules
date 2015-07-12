@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------------------
-// <copyright file="EnsureMinimumLength.cs" company="Sitecore Shared Source">
+// <copyright file="EnsureMaximumLength.cs" company="Sitecore Shared Source">
 // Copyright (c) Sitecore.  All rights reserved.
 // </copyright>
 // <summary>
@@ -16,19 +16,16 @@ using Sitecore.Rules;
 namespace Sitecore.Sharedsource.ItemNamingRules.Actions
 {
     /// <summary>
-    /// Rules engine action to rename an item with characters from 
-    /// <see cref="DefaultName" /> if the name does not meet or exceed
-    /// the number of characters in that string.
+    /// Rules engine action to ensure item name does not exceed  <see cref="MaxLength" /> 
+    /// otherwise trim string.
     /// </summary>
     /// <typeparam name="T">Type providing rule context.</typeparam>
-    public class EnsureMinimumLength<T> : RenamingAction<T>
-      where T : RuleContext
+    public class EnsureMaximumLength<T> : RenamingAction<T> where T : RuleContext
     {
         /// <summary>
-        /// Gets or sets the string from which to append characters 
-        /// to item names that are not longer than this string.
+        /// Gets or sets the maximum allowed length for item names.
         /// </summary>
-        public string DefaultName
+        public int MaxLength
         {
             get;
             set;
@@ -46,10 +43,10 @@ namespace Sitecore.Sharedsource.ItemNamingRules.Actions
 
         private void ApplyRule(T ruleContext)
         {
-            if (ruleContext.Item.Name.Length >= this.DefaultName.Length)
-                return;
-
-            ruleContext.Item.Name += this.DefaultName.Substring(ruleContext.Item.Name.Length - 1);
+            if (this.MaxLength > 0 && ruleContext.Item.Name.Length > this.MaxLength)
+            {
+                ruleContext.Item.Name = ruleContext.Item.Name.Substring(0, this.MaxLength);
+            }
         }
     }
 }

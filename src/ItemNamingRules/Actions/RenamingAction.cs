@@ -11,50 +11,28 @@
 // <url>http://marketplace.sitecore.net/en/Modules/Item_Naming_rules.aspx</url>
 //-----------------------------------------------------------------------------------
 
+using System;
+using Sitecore.Rules;
+using Sitecore.Rules.Actions;
+
 namespace Sitecore.Sharedsource.ItemNamingRules.Actions
 {
-    using System;
-    using Sitecore.Data.Items;
-    using Sitecore.Rules;
-    using Sitecore.Rules.Actions;
 
     /// <summary>
-    /// Base class for rules engine actions that rename items.
+    /// Base class for rules engine actions that checks if item name has changed
     /// </summary>
     /// <typeparam name="T">Type providing rule context.</typeparam>
     public abstract class RenamingAction<T> : RuleAction<T>
       where T : RuleContext
     {
         /// <summary>
-        /// Rename the item, unless it is a standard values item 
-        /// or the start item for any of the managed Web sites.
+        /// Check if Item Name has changed from user input
         /// </summary>
-        /// <param name="item">The item to rename.</param>
-        /// <param name="newName">The new name for the item.</param>
-        protected void RenameItem(Item item, string newName)
+        protected void CheckItemNameChanged(T ruleContext)
         {
-            if (item.Template.StandardValues != null && item.ID == item.Template.StandardValues.ID)
+            if (ruleContext.Item.Name == ruleContext.Item.InnerData.Definition.Name)
             {
-                return;
-            }
-
-            foreach (Sitecore.Web.SiteInfo site in Sitecore.Configuration.Factory.GetSiteInfoList())
-            {
-                if (String.Compare(site.RootPath + site.StartItem, item.Paths.FullPath, true) == 0)
-                {
-                    return;
-                }
-            }
-
-            using (new Sitecore.SecurityModel.SecurityDisabler())
-            {
-                using (new Sitecore.Data.Items.EditContext(item))
-                {
-                    using (new Sitecore.Data.Events.EventDisabler())
-                    {
-                        item.Name = newName;
-                    }
-                }
+                ruleContext.Abort();
             }
         }
     }

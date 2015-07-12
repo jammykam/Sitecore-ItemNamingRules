@@ -13,11 +13,12 @@
 // <url>http://marketplace.sitecore.net/en/Modules/Item_Naming_rules.aspx</url>
 //-----------------------------------------------------------------------------------
 
+using System;
+using System.Text.RegularExpressions;
+using Sitecore.Rules;
+
 namespace Sitecore.Sharedsource.ItemNamingRules.Actions
 {
-    using System;
-    using System.Text.RegularExpressions;
-    using Sitecore.Rules;
 
     /// <summary>
     /// Rules engine action to replace invalid characters in item names.
@@ -30,10 +31,14 @@ namespace Sitecore.Sharedsource.ItemNamingRules.Actions
         /// Gets or sets the string with which to replace invalid characters
         /// in item names.
         /// </summary>
+        private string _replaceWith;
         public string ReplaceWith
         {
-            get;
-            set;
+            get { return _replaceWith; }
+            set
+            {
+                _replaceWith = value.Equals("{remove-spaces}") ? String.Empty : value;
+            }
         }
 
         /// <summary>
@@ -52,52 +57,40 @@ namespace Sitecore.Sharedsource.ItemNamingRules.Actions
         /// <param name="ruleContext">The rule context.</param>
         public override void Apply(T ruleContext)
         {
+            ApplyRule(ruleContext);
+            CheckItemNameChanged(ruleContext);
+        }
+
+        private void ApplyRule(T ruleContext)
+        {
             Sitecore.Diagnostics.Assert.IsNotNull(this.ReplaceWith, "ReplaceWith");
-            Regex patternMatcher = new Regex(this.MatchPattern);
-            string newName = String.Empty;
+            string newName = Regex.Replace(ruleContext.Item.Name, this.MatchPattern, this.ReplaceWith);
 
-            foreach (char c in ruleContext.Item.Name)
+            if (this.ReplaceWith.Length > 0)
             {
-                if (patternMatcher.IsMatch(c.ToString()))
+                string sequence = this.ReplaceWith + this.ReplaceWith;
+                while (newName.Contains(sequence))
                 {
-                    newName += c;
+                    newName = newName.Replace(sequence, this.ReplaceWith);
                 }
-                else if (!String.IsNullOrEmpty(this.ReplaceWith))
+
+                if (newName.StartsWith(this.ReplaceWith))
                 {
-                    newName += this.ReplaceWith;
+                    newName = newName.Substring(this.ReplaceWith.Length, newName.Length - this.ReplaceWith.Length);
+                }
+
+                if (newName.EndsWith(this.ReplaceWith))
+                {
+                    newName = newName.Substring(0, newName.Length - this.ReplaceWith.Length);
+                }
+
+                if (String.IsNullOrEmpty(newName))
+                {
+                    newName = this.ReplaceWith;
                 }
             }
 
-            while (newName.StartsWith(this.ReplaceWith))
-            {
-                newName = newName.Substring(
-                  this.ReplaceWith.Length,
-                  newName.Length - this.ReplaceWith.Length);
-            }
-
-            while (newName.EndsWith(this.ReplaceWith))
-            {
-                newName = newName.Substring(
-                  0,
-                  newName.Length - this.ReplaceWith.Length);
-            }
-
-            string sequence = this.ReplaceWith + this.ReplaceWith;
-
-            while (newName.Contains(sequence))
-            {
-                newName = newName.Replace(sequence, this.ReplaceWith);
-            }
-
-            if (String.IsNullOrEmpty(newName))
-            {
-                newName = this.ReplaceWith;
-            }
-
-            if (ruleContext.Item.Name != newName)
-            {
-                this.RenameItem(ruleContext.Item, newName);
-            }
+            ruleContext.Item.Name = newName;
         }
     }
 }
