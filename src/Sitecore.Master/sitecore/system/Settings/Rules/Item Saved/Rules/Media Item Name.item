@@ -1,0 +1,83 @@
+----item----
+version: 1
+id: {ACB122E0-812F-4CCF-A341-B069017DBC7B}
+database: master
+path: /sitecore/system/Settings/Rules/Item Saved/Rules/Media Item Name
+parent: {86E2276A-437F-492F-B1B9-CEDBB3B9DA88}
+name: Media Item Name
+master: {00000000-0000-0000-0000-000000000000}
+template: {D9BDF22F-6E17-47F3-AB64-49C717BA92DA}
+templatekey: Rule
+
+----field----
+field: {908EF45D-4940-4B6A-857D-3739BA4ACF8F}
+name: Rule
+key: rule
+content-length: 671
+
+<ruleset>
+  <rule uid="{7AE76A4F-A933-4643-AC0E-139F21D4FB50}">
+    <conditions>
+      <condition id="{7D5DA661-BEF9-441C-B1F7-D80DE3E0972F}" uid="3C17BDD239694ED4B8619A0519D56549" itemid="{3D6658D8-A0BF-4E75-B3E2-D050FABCF4E1}" />
+    </conditions>
+    <actions>
+      <action id="{97EDDE8D-778C-4657-89F4-BD71F8DC9166}" uid="8D1A7C0B23CE4143995FC2E0786A4232" MatchPattern="[^0-9a-zA-Z]+" ReplaceWith="-" />
+      <action id="{A636CD38-32AD-4762-9434-E5932FE250F5}" uid="614D75914800495AA2AD215274D34867" MaxLength="100" />
+      <action id="{B645C552-2BCF-45EB-9F4B-E2259C239084}" uid="B05A7D1F6253426787077D0857AB6723" />
+    </actions>
+  </rule>
+</ruleset>
+----field----
+field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
+name: __Sortorder
+key: __sortorder
+content-length: 2
+
+50
+----version----
+language: en
+version: 1
+revision: a40a1a84-6c12-40dd-8b03-b060f93d858d
+
+----field----
+field: {45CF9130-802A-41BE-B3EB-C02F657DCC2E}
+name: Name
+key: name
+content-length: 9
+
+Item Name
+----field----
+field: {B8F42732-9CB8-478D-AE95-07E25345FB0F}
+name: __Hide version
+key: __hide version
+content-length: 1
+
+1
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20150402T002103Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+a40a1a84-6c12-40dd-8b03-b060f93d858d
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 35
+
+20150712T011257:635722603772159826Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin
