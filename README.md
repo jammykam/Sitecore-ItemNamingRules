@@ -25,21 +25,24 @@ You can use additional techniques to meet specific objectives when controlling i
 Note: The ItemNamingRules project will not rename standard values items, or the home item of any of the managed Web sites.
 
 ## Installation
-The provided package `$(SolutionDir)\release\ItemNamingRules.Sitecore.Master.update` was created using [Team Development for Sitecore] and is supported with Sitecore 6.1-7. Navigate to http://yoursite/sitecore/admin/updateinstallationwizard.aspx and install the package.
+The provided package `$(SolutionDir)\release\ItemNamingRules.Sitecore.Master.zip` can be installed using the standard Installation Wizard and is supported with Sitecore 7.1+. The Installation Wizard can be found in the Sitecore menu under Devekioment tools from the Sitecore desktop.
 
 ## Configuration
 
-Two rule conditions have been provided. For instructions to use either of these conditions in a rule, see the [Rules Engine Cookbook].
+Two rule conditions have been provided. For instructions to use either of these conditions in a rule, see the [Rules Engine Cookbook]. Alternatively you can use the `where the item has a layout condition` from `/sitecore/system/Settings/Rules/Definitions/Elements/Item Version CM/Layout`.
 
-* `/sitecore/system/Settings/Rules/Common/Conditions/Presentation/Has Layout Details For Any Device`
-* `/sitecore/system/Settings/Rules/Common/Conditions/Presentation/Has Layout Details For Default Device`
+* `/sitecore/system/Settings/Rules/Definitions/Elements/Item Naming/Has Layout Details For Default Device`
+* `/sitecore/system/Settings/Rules/Definitions/Elements/Item Naming/Has Layout Details For Any Device`
 
-Four rule actions have been provided. For instructions to use these actions in a rule, see the [Rules Engine Cookbook].
+The following rule actions have been provided. For instructions to use these actions in a rule, see the [Rules Engine Cookbook].
 
-* `/sitecore/system/Settings/Rules/Common/Actions/Ensure Item Name is Unique`
-* `/sitecore/system/Settings/Rules/Common/Actions/Ensure Minimum Length of Item Name`
-* `/sitecore/system/Settings/Rules/Common/Actions/Lowercase Item Name`
-* `/sitecore/system/Settings/Rules/Common/Actions/Replace Invalid Characters in Item Name`
+* `/sitecore/system/Settings/Rules/Definitions/Elements/Item Naming/Ensure Maximum Length of Item Name`
+* `/sitecore/system/Settings/Rules/Definitions/Elements/Item Naming/Ensure Minimum Length of Item Name`
+* `/sitecore/system/Settings/Rules/Definitions/Elements/Item Naming/Ensure Name is Unique`
+* `/sitecore/system/Settings/Rules/Definitions/Elements/Item Naming/Lowercase Item Name`
+* `/sitecore/system/Settings/Rules/Definitions/Elements/Item Naming/Replace Invalid Characters in Item Name`
+* `/sitecore/system/Settings/Rules/Definitions/Elements/Item Naming/Store Pretty Name in Display Name`
+* `/sitecore/system/Settings/Rules/Definitions/Elements/Item Naming/Save Name Changes`
 
 To manage item naming rules, in the Content Editor, select the `/sitecore/system/Settings/Rules/Item Saved/Rules` item. Insert rule definition items using the `System/Rules/Rule` data template. In the Rule field, click Edit Field, then select conditions, then add actions (in the order listed), and then enter parameters for the conditions and actions:
 
@@ -48,6 +51,8 @@ To manage item naming rules, in the Content Editor, select the `/sitecore/system
 * `DefaultName` - Characters to use to replace invalid characters in item name. Also defines minimum item name length. For example, given DefaultName 12345, the action will rename the item named A to A2345.
 * `MaxLength` - Maximum item name length. For example, 25.
 * `Device` - the device for which the rule applies. 
+
+Two rules have been provided for Content Items and Media Library Items, modify these ar erquird to target specific content items. It is suggested at a minimum that you change `/sitecore/system/Settings/Rules/Item Saved/Rules/Media Item Name` to target only specific projct media items, which should be placed into a separate folder to make it easier to target and clearer that they are project specific.
 
 ## Credits
 This code was provided by [John West] via 
@@ -58,8 +63,9 @@ This code was provided by [John West] via
 
 The starting point for this code was taken from the [Marketplace](http://marketplace.sitecore.net/en/Modules/Item_Naming_rules.aspx) with no functional modifications. This includes any changes that were outlined in the comments [here](http://www.sitecore.net/Community/Technical-Blogs/John-West-Sitecore-Blog/Posts/2010/11/Use-the-Sitecore-Rules-Engine-to-Control-Item-Names.aspx). The provided code was turned into a proper Visual Studio solution and installation package by [Sean Kearney]. 
 
+This specific fork was updated by [Kamruz Jaman]. You can read more in this blog post: http://wp.me/p2SmN4-71
 
 [Rules Engine Cookbook]: http://sdn.sitecore.net/reference/sitecore%206/rules%20engine%20cookbook.aspx
-[Team Development for Sitecore]: http://TeamDevelopmentForSitecore.com
 [John West]: https://twitter.com/sitecorejohn
 [Sean Kearney]: https://twitter.com/seankearney
+[Kamruz Jaman]: https://twitter.com/jammykam
