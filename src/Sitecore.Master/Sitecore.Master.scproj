@@ -28,10 +28,13 @@
     <DebugSymbols>true</DebugSymbols>
     <OutputPath>.\bin\Debug\</OutputPath>
     <RecursiveDeployAction>Ignore</RecursiveDeployAction>
-    <SitecoreDeployFolder>C:\inetpub\wwwroot\Sitecore8u3\Website</SitecoreDeployFolder>
-    <SitecoreWebUrl>http://sitecore8u3</SitecoreWebUrl>
-    <SitecoreAccessGuid>27064b0a-b994-48bd-9dca-43dee918aef7</SitecoreAccessGuid>
-    <InstallSitecoreConnector>True</InstallSitecoreConnector>
+    <SitecoreDeployFolder>
+    </SitecoreDeployFolder>
+    <SitecoreWebUrl>
+    </SitecoreWebUrl>
+    <SitecoreAccessGuid>
+    </SitecoreAccessGuid>
+    <InstallSitecoreConnector>False</InstallSitecoreConnector>
     <DisableFileDeployment>False</DisableFileDeployment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
