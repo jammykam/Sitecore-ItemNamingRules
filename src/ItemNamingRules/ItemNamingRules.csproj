@@ -62,7 +62,6 @@
     <Compile Include="Actions\EnsureMinimumLength.cs" />
     <Compile Include="Actions\EnsureUnique.cs" />
     <Compile Include="Actions\Lowercase.cs" />
-    <Compile Include="Actions\RenamingAction.cs" />
     <Compile Include="Actions\ReplaceInvalidCharacters.cs" />
     <Compile Include="Conditions\HasLayoutDetailsForAnyDevice.cs" />
     <Compile Include="Conditions\HasLayoutDetailsForDefaultDevice.cs" />

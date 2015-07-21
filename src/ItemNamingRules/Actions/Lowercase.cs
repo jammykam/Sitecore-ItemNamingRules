@@ -12,6 +12,7 @@
 //-----------------------------------------------------------------------------------
 
 using Sitecore.Rules;
+using Sitecore.Rules.Actions;
 
 namespace Sitecore.Sharedsource.ItemNamingRules.Actions
 {
@@ -20,8 +21,7 @@ namespace Sitecore.Sharedsource.ItemNamingRules.Actions
     /// Rules engine action to lowercase item names.
     /// </summary>
     /// <typeparam name="T">Type providing rule context.</typeparam>
-    public class Lowercase<T> : RenamingAction<T>
-      where T : RuleContext
+    public class Lowercase<T> : RuleAction<T> where T : RuleContext
     {
         /// <summary>
         /// Action implementation.

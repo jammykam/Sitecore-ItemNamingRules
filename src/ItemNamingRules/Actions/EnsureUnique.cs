@@ -16,6 +16,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Sitecore.Data.Items;
 using Sitecore.Rules;
+using Sitecore.Rules.Actions;
 
 namespace Sitecore.Sharedsource.ItemNamingRules.Actions
 {
@@ -25,20 +26,13 @@ namespace Sitecore.Sharedsource.ItemNamingRules.Actions
     /// by replacing trailing characters with number sequence.
     /// </summary>
     /// <typeparam name="T">Type providing rule context.</typeparam>
-    public class EnsureUnique<T> : RenamingAction<T>
-      where T : RuleContext
+    public class EnsureUnique<T> : RuleAction<T> where T : RuleContext
     {
         /// <summary>
         /// Action implementation.
         /// </summary>
         /// <param name="ruleContext">The rule context.</param>
         public override void Apply(T ruleContext)
-        {
-            ApplyRule(ruleContext);
-            CheckItemNameChanged(ruleContext);
-        }
-
-        private void ApplyRule(T ruleContext)
         {
             int sequence = 1;
             string itemName = ruleContext.Item.Name;

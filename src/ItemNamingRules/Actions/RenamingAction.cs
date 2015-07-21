@@ -22,8 +22,7 @@ namespace Sitecore.Sharedsource.ItemNamingRules.Actions
     /// Base class for rules engine actions that checks if item name has changed
     /// </summary>
     /// <typeparam name="T">Type providing rule context.</typeparam>
-    public abstract class RenamingAction<T> : RuleAction<T>
-      where T : RuleContext
+    public abstract class RenamingAction<T> : RuleAction<T> where T : RuleContext
     {
         /// <summary>
         /// Check if Item Name has changed from user input
