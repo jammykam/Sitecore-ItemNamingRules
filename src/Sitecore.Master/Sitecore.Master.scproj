@@ -28,14 +28,23 @@
     <DebugSymbols>true</DebugSymbols>
     <OutputPath>.\bin\Debug\</OutputPath>
     <RecursiveDeployAction>Ignore</RecursiveDeployAction>
-    <SitecoreDeployFolder>
-    </SitecoreDeployFolder>
-    <SitecoreWebUrl>
-    </SitecoreWebUrl>
-    <SitecoreAccessGuid>
-    </SitecoreAccessGuid>
-    <InstallSitecoreConnector>False</InstallSitecoreConnector>
+    <SitecoreDeployFolder>C:\inetpub\wwwroot\Sitecore8\Website</SitecoreDeployFolder>
+    <SitecoreWebUrl>http://sitecore8</SitecoreWebUrl>
+    <SitecoreAccessGuid>68e3f8b1-37f0-498c-8992-8495eda89dc2</SitecoreAccessGuid>
+    <InstallSitecoreConnector>True</InstallSitecoreConnector>
     <DisableFileDeployment>False</DisableFileDeployment>
+    <PackageName>Sitecore.Master</PackageName>
+    <GeneratePackage>True</GeneratePackage>
+    <SeperateFilesAndItems>False</SeperateFilesAndItems>
+    <PackageExcludeCode>False</PackageExcludeCode>
+    <AddDateTimeToPackageName>False</AddDateTimeToPackageName>
+    <PackageAuthor>Kamruz Jaman</PackageAuthor>
+    <PackagePublisher>Sitecore Shared Source Module</PackagePublisher>
+    <PackageReadme>Adds Rule Engine defintion for SEO Friendly Item Names</PackageReadme>
+    <PackageVersion>1.0.0</PackageVersion>
+    <SitecoreAssemblyPath>../../lib</SitecoreAssemblyPath>
+    <EnableValidations>False</EnableValidations>
+    <ValidationSettingsFilePath>.\Sitecore.Master_Debug.xml</ValidationSettingsFilePath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
     <DebugSymbols>false</DebugSymbols>
@@ -142,6 +151,10 @@
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>DeployOnce</ItemDeployment>
     </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Rules\Definitions\Elements\Item Naming\Title Case Item Name.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>DeployOnce</ItemDeployment>
+    </SitecoreItem>
     <SitecoreItem Include="sitecore\system\Settings\Rules\Definitions\Elements\Item Naming\Visibility.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>DeployOnce</ItemDeployment>
@@ -168,6 +181,7 @@
     </SitecoreItem>
     <SitecoreItem Include="sitecore\system\Settings\Rules\Item Saved\Rules\Item Name.item">
       <ItemDeployment>DeployOnce</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\system\Settings\Rules\Item Saved\Rules\Media Item Name.item">
       <ItemDeployment>DeployOnce</ItemDeployment>

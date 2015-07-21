@@ -21,8 +21,7 @@ namespace Sitecore.Sharedsource.ItemNamingRules.Actions
     /// Rules engine action to lowercase item names.
     /// </summary>
     /// <typeparam name="T">Type providing rule context.</typeparam>
-    public class ToTitleCase<T> : RuleAction<T>
-      where T : RuleContext
+    public class ToTitleCase<T> : RuleAction<T> where T : RuleContext
     {
         /// <summary>
         /// Action implementation.
