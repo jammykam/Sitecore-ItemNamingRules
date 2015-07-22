@@ -28,10 +28,13 @@
     <DebugSymbols>true</DebugSymbols>
     <OutputPath>.\bin\Debug\</OutputPath>
     <RecursiveDeployAction>Ignore</RecursiveDeployAction>
-    <SitecoreDeployFolder>C:\inetpub\wwwroot\Sitecore8\Website</SitecoreDeployFolder>
-    <SitecoreWebUrl>http://sitecore8</SitecoreWebUrl>
-    <SitecoreAccessGuid>68e3f8b1-37f0-498c-8992-8495eda89dc2</SitecoreAccessGuid>
-    <InstallSitecoreConnector>True</InstallSitecoreConnector>
+    <SitecoreDeployFolder>
+    </SitecoreDeployFolder>
+    <SitecoreWebUrl>
+    </SitecoreWebUrl>
+    <SitecoreAccessGuid>
+    </SitecoreAccessGuid>
+    <InstallSitecoreConnector>False</InstallSitecoreConnector>
     <DisableFileDeployment>False</DisableFileDeployment>
     <PackageName>Sitecore.Master</PackageName>
     <GeneratePackage>True</GeneratePackage>
@@ -104,87 +107,87 @@
       <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\system\Settings\Rules\Definitions\Elements\Item Naming.item">
-      <ItemDeployment>DeployOnce</ItemDeployment>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\system\Settings\Rules\Definitions\Elements\Item Naming\Ensure Maximum Length of Item Name.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
-      <ItemDeployment>DeployOnce</ItemDeployment>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\system\Settings\Rules\Definitions\Elements\Item Naming\Ensure Minimum Length of Item Name.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
-      <ItemDeployment>DeployOnce</ItemDeployment>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\system\Settings\Rules\Definitions\Elements\Item Naming\Ensure Name is Unique.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
-      <ItemDeployment>DeployOnce</ItemDeployment>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\system\Settings\Rules\Definitions\Elements\Item Naming\Has Layout Details For Any Device.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
-      <ItemDeployment>DeployOnce</ItemDeployment>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\system\Settings\Rules\Definitions\Elements\Item Naming\Has Layout Details For Default Device.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
-      <ItemDeployment>DeployOnce</ItemDeployment>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\system\Settings\Rules\Definitions\Elements\Item Naming\Lowercase Item Name.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
-      <ItemDeployment>DeployOnce</ItemDeployment>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\system\Settings\Rules\Definitions\Elements\Item Naming\Replace Invalid Characters in Item Name.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
-      <ItemDeployment>DeployOnce</ItemDeployment>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\system\Settings\Rules\Definitions\Elements\Item Naming\Save Name Changes.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
-      <ItemDeployment>DeployOnce</ItemDeployment>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\system\Settings\Rules\Definitions\Elements\Item Naming\Store Pretty Name in Display Name.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
-      <ItemDeployment>DeployOnce</ItemDeployment>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\system\Settings\Rules\Definitions\Elements\Item Naming\Tags.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
-      <ItemDeployment>DeployOnce</ItemDeployment>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\system\Settings\Rules\Definitions\Elements\Item Naming\Tags\Default.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
-      <ItemDeployment>DeployOnce</ItemDeployment>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\system\Settings\Rules\Definitions\Elements\Item Naming\Title Case Item Name.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
-      <ItemDeployment>DeployOnce</ItemDeployment>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\system\Settings\Rules\Definitions\Elements\Item Naming\Visibility.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
-      <ItemDeployment>DeployOnce</ItemDeployment>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\system\Settings\Rules\Definitions\Tags.item">
       <ItemDeployment>DeployOnce</ItemDeployment>
       <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\system\Settings\Rules\Definitions\Tags\Item Naming.item">
-      <ItemDeployment>DeployOnce</ItemDeployment>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\system\Settings\Rules\Definitions\Tags\Item Naming\Visibility.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
-      <ItemDeployment>DeployOnce</ItemDeployment>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\system\Settings\Rules\Item Saved.item">
       <ItemDeployment>DeployOnce</ItemDeployment>
       <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\system\Settings\Rules\Item Saved\Rules.item">
-      <ItemDeployment>DeployOnce</ItemDeployment>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
       <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\system\Settings\Rules\Item Saved\Rules\Item Name.item">
-      <ItemDeployment>DeployOnce</ItemDeployment>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
       <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\system\Settings\Rules\Item Saved\Rules\Media Item Name.item">
-      <ItemDeployment>DeployOnce</ItemDeployment>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
       <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\system\Settings\Rules\Item Saved\Tags.item">
@@ -192,7 +195,7 @@
       <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\system\Settings\Rules\Item Saved\Tags\Item Naming.item">
-      <ItemDeployment>DeployOnce</ItemDeployment>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
       <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
   </ItemGroup>
