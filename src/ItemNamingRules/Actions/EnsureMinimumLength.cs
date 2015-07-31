@@ -12,6 +12,7 @@
 //-----------------------------------------------------------------------------------
 
 using Sitecore.Rules;
+using Sitecore.Rules.Actions;
 
 namespace Sitecore.Sharedsource.ItemNamingRules.Actions
 {
@@ -21,8 +22,7 @@ namespace Sitecore.Sharedsource.ItemNamingRules.Actions
     /// the number of characters in that string.
     /// </summary>
     /// <typeparam name="T">Type providing rule context.</typeparam>
-    public class EnsureMinimumLength<T> : RenamingAction<T>
-      where T : RuleContext
+    public class EnsureMinimumLength<T> : RuleAction<T> where T : RuleContext
     {
         /// <summary>
         /// Gets or sets the string from which to append characters 
@@ -39,12 +39,6 @@ namespace Sitecore.Sharedsource.ItemNamingRules.Actions
         /// </summary>
         /// <param name="ruleContext">The rule context.</param>
         public override void Apply(T ruleContext)
-        {
-            ApplyRule(ruleContext);
-            CheckItemNameChanged(ruleContext);
-        }
-
-        private void ApplyRule(T ruleContext)
         {
             if (ruleContext.Item.Name.Length >= this.DefaultName.Length)
                 return;

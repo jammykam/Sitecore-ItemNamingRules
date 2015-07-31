@@ -1,10 +1,10 @@
 ----item----
 version: 1
-id: {14EC83B8-5CA0-43CB-AFE1-E29C387591FA}
+id: {15D6871A-0561-4469-87C2-89A3B48EE76B}
 database: master
-path: /sitecore/system/Settings/Rules/Definitions/Elements/Item Naming/Ensure Maximum Length of Item Name
+path: /sitecore/system/Settings/Rules/Definitions/Elements/Item Naming/Title Case Item Name
 parent: {A5BFD2FC-9B28-434D-B858-77125D34174A}
-name: Ensure Maximum Length of Item Name
+name: Title Case Item Name
 master: {00000000-0000-0000-0000-000000000000}
 template: {F90052A5-B4E6-4E6D-9812-1E1B88A6FCEA}
 templatekey: Action
@@ -13,28 +13,28 @@ templatekey: Action
 field: {FF55D5A7-6D4B-4CD1-83E0-BAC268073F66}
 name: Type
 key: type
-content-length: 104
+content-length: 96
 
-Sitecore.Sharedsource.ItemNamingRules.Actions.EnsureMaximumLength, Sitecore.Sharedsource.ItemNamingRules
+Sitecore.Sharedsource.ItemNamingRules.Actions.ToTitleCase, Sitecore.Sharedsource.ItemNamingRules
 ----field----
 field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
 name: __Sortorder
 key: __sortorder
-content-length: 3
+content-length: 4
 
-300
+1000
 ----version----
 language: en
 version: 1
-revision: 9d4a18fa-689b-4ef0-8a0e-4aeb0c7447e3
+revision: 8f77de5e-77bc-4d47-9ca6-f1e79904c2e0
 
 ----field----
 field: {EEB36A3B-40D9-4AF5-862A-DE257B84DCA3}
 name: Text
 key: text
-content-length: 75
+content-length: 28
 
-ensure item name does not exceed [MaxLength,int,,maximum length] characters
+convert to lowercase letters
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -48,7 +48,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20150402T000646Z
+20150402T000911Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -62,7 +62,7 @@ name: __Revision
 key: __revision
 content-length: 36
 
-9d4a18fa-689b-4ef0-8a0e-4aeb0c7447e3
+8f77de5e-77bc-4d47-9ca6-f1e79904c2e0
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated

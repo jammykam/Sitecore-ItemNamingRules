@@ -16,6 +16,7 @@
 using System;
 using System.Text.RegularExpressions;
 using Sitecore.Rules;
+using Sitecore.Rules.Actions;
 
 namespace Sitecore.Sharedsource.ItemNamingRules.Actions
 {
@@ -24,8 +25,7 @@ namespace Sitecore.Sharedsource.ItemNamingRules.Actions
     /// Rules engine action to replace invalid characters in item names.
     /// </summary>
     /// <typeparam name="T">Type providing rule context.</typeparam>
-    public class ReplaceInvalidCharacters<T> : RenamingAction<T>
-      where T : RuleContext
+    public class ReplaceInvalidCharacters<T> : RuleAction<T> where T : RuleContext
     {
         /// <summary>
         /// Gets or sets the string with which to replace invalid characters
@@ -35,10 +35,25 @@ namespace Sitecore.Sharedsource.ItemNamingRules.Actions
         public string ReplaceWith
         {
             get { return _replaceWith; }
-            set
+            set { _replaceWith = GetReplacementValue(value); }
+        }
+
+        private string GetReplacementValue(string value)
+        {
+            string replaceWith;
+            switch (value)
             {
-                _replaceWith = value.Equals("{remove-spaces}") ? String.Empty : value;
+                case "{remove-spaces}":
+                    replaceWith = String.Empty;
+                    break;
+                case "{hyphen}":
+                    replaceWith = "-";
+                    break;
+                default:
+                    replaceWith = value;
+                    break;
             }
+            return replaceWith;
         }
 
         /// <summary>
@@ -56,12 +71,6 @@ namespace Sitecore.Sharedsource.ItemNamingRules.Actions
         /// </summary>
         /// <param name="ruleContext">The rule context.</param>
         public override void Apply(T ruleContext)
-        {
-            ApplyRule(ruleContext);
-            CheckItemNameChanged(ruleContext);
-        }
-
-        private void ApplyRule(T ruleContext)
         {
             Sitecore.Diagnostics.Assert.IsNotNull(this.ReplaceWith, "ReplaceWith");
             string newName = Regex.Replace(ruleContext.Item.Name, this.MatchPattern, this.ReplaceWith);

@@ -21,7 +21,7 @@ namespace Sitecore.Sharedsource.ItemNamingRules.Actions
     /// Rules engine action to lowercase item names.
     /// </summary>
     /// <typeparam name="T">Type providing rule context.</typeparam>
-    public class Lowercase<T> : RuleAction<T> where T : RuleContext
+    public class ToTitleCase<T> : RuleAction<T> where T : RuleContext
     {
         /// <summary>
         /// Action implementation.
@@ -29,7 +29,15 @@ namespace Sitecore.Sharedsource.ItemNamingRules.Actions
         /// <param name="ruleContext">The rule context.</param>
         public override void Apply(T ruleContext)
         {
-            ruleContext.Item.Name = ruleContext.Item.Name.ToLower();
+            ruleContext.Item.Name = TitleCase(ruleContext.Item.Name);
+        }
+
+        private string TitleCase(string word)
+        {
+            string newWord = System.Text.RegularExpressions.Regex.Replace(word, "([a-z](?=[A-Z])|[A-Z](?=[A-Z][a-z]))", "$1+");
+            newWord = System.Globalization.CultureInfo.InvariantCulture.TextInfo.ToTitleCase(newWord);
+            newWord = newWord.Replace("+", "");
+            return newWord;
         }
     }
 }

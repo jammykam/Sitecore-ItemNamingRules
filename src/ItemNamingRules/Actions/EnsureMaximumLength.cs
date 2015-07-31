@@ -12,6 +12,7 @@
 //-----------------------------------------------------------------------------------
 
 using Sitecore.Rules;
+using Sitecore.Rules.Actions;
 
 namespace Sitecore.Sharedsource.ItemNamingRules.Actions
 {
@@ -20,7 +21,7 @@ namespace Sitecore.Sharedsource.ItemNamingRules.Actions
     /// otherwise trim string.
     /// </summary>
     /// <typeparam name="T">Type providing rule context.</typeparam>
-    public class EnsureMaximumLength<T> : RenamingAction<T> where T : RuleContext
+    public class EnsureMaximumLength<T> : RuleAction<T> where T : RuleContext
     {
         /// <summary>
         /// Gets or sets the maximum allowed length for item names.
@@ -36,12 +37,6 @@ namespace Sitecore.Sharedsource.ItemNamingRules.Actions
         /// </summary>
         /// <param name="ruleContext">The rule context.</param>
         public override void Apply(T ruleContext)
-        {
-            ApplyRule(ruleContext);
-            CheckItemNameChanged(ruleContext);
-        }
-
-        private void ApplyRule(T ruleContext)
         {
             if (this.MaxLength > 0 && ruleContext.Item.Name.Length > this.MaxLength)
             {
