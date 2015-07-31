@@ -36,16 +36,21 @@
     </SitecoreAccessGuid>
     <InstallSitecoreConnector>False</InstallSitecoreConnector>
     <DisableFileDeployment>False</DisableFileDeployment>
-    <PackageName>Sitecore.Master</PackageName>
+    <PackageName>ItemNamingRules.Sitecore.Master</PackageName>
     <GeneratePackage>True</GeneratePackage>
     <SeperateFilesAndItems>False</SeperateFilesAndItems>
-    <PackageExcludeCode>False</PackageExcludeCode>
+    <PackageExcludeCode>True</PackageExcludeCode>
     <AddDateTimeToPackageName>False</AddDateTimeToPackageName>
     <PackageAuthor>Kamruz Jaman</PackageAuthor>
     <PackagePublisher>Sitecore Shared Source Module</PackagePublisher>
-    <PackageReadme>Adds Rule Engine defintion for SEO Friendly Item Names</PackageReadme>
+    <PackageReadme>The ItemNamingRules project provides conditions and actions for the rules engine to automate item name conventions. You can use the ItemNamingRules project to apply different item naming rules in different branches of the content tree. For more information about the rules engine, see the Rules Engine Cookbook.
+
+Ensure you have deployed "Sitecore.Sharedsource.ItemNamingRules.dll" to your /bin directory otherwise installation of the package will fail.
+
+https://github.com/jammykam/Sitecore-ItemNamingRules
+http://wp.me/p2SmN4-71</PackageReadme>
     <PackageVersion>1.0.0</PackageVersion>
-    <SitecoreAssemblyPath>../../lib</SitecoreAssemblyPath>
+    <SitecoreAssemblyPath>..\..\lib\</SitecoreAssemblyPath>
     <EnableValidations>False</EnableValidations>
     <ValidationSettingsFilePath>.\Sitecore.Master_Debug.xml</ValidationSettingsFilePath>
   </PropertyGroup>
@@ -60,19 +65,23 @@
     <SitecoreAccessGuid>
     </SitecoreAccessGuid>
     <InstallSitecoreConnector>False</InstallSitecoreConnector>
-    <PackageAuthor>Hedgehog Development</PackageAuthor>
-    <PackagePublisher>Hedgehog Development</PackagePublisher>
-    <PackageVersion>1.0</PackageVersion>
-    <PackageReadme>
-            The ItemNamingRules project provides conditions and actions for the rules engine to automate item name conventions. You can use the ItemNamingRules project to apply different item naming rules in different branches of the content tree. For more information about the rules engine, see the Rules Engine Cookbook.
+    <PackageAuthor>Kamruz Jaman</PackageAuthor>
+    <PackagePublisher>Sitecore Shared Source Module</PackagePublisher>
+    <PackageVersion>1.0.0</PackageVersion>
+    <PackageReadme>The ItemNamingRules project provides conditions and actions for the rules engine to automate item name conventions. You can use the ItemNamingRules project to apply different item naming rules in different branches of the content tree. For more information about the rules engine, see the Rules Engine Cookbook.
 
-            https://github.com/seankearney/Sitecore-ItemNamingRules
+Ensure you have deployed "Sitecore.Sharedsource.ItemNamingRules.dll" to your /bin directory otherwise installation of the package will fail.
 
-        </PackageReadme>
+https://github.com/jammykam/Sitecore-ItemNamingRules
+http://wp.me/p2SmN4-71</PackageReadme>
     <SitecoreAssemblyPath>..\..\lib\</SitecoreAssemblyPath>
     <GeneratePackage>True</GeneratePackage>
     <SeperateFilesAndItems>False</SeperateFilesAndItems>
     <AddDateTimeToPackageName>False</AddDateTimeToPackageName>
+    <PackageExcludeCode>True</PackageExcludeCode>
+    <PackageName>ItemNamingRules.Sitecore.Master</PackageName>
+    <EnableValidations>False</EnableValidations>
+    <ValidationSettingsFilePath>.\Sitecore.Master_Release.xml</ValidationSettingsFilePath>
   </PropertyGroup>
   <ItemGroup>
     <AssemblyAttributes Include="AssemblyFileVersion">
