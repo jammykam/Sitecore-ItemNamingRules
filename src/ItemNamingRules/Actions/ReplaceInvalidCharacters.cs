@@ -35,10 +35,25 @@ namespace Sitecore.Sharedsource.ItemNamingRules.Actions
         public string ReplaceWith
         {
             get { return _replaceWith; }
-            set
+            set { _replaceWith = GetReplacementValue(value); }
+        }
+
+        private string GetReplacementValue(string value)
+        {
+            string replaceWith;
+            switch (value)
             {
-                _replaceWith = value.Equals("{remove-spaces}") ? String.Empty : value;
+                case "{remove-spaces}":
+                    replaceWith = String.Empty;
+                    break;
+                case "{hyphen}":
+                    replaceWith = "-";
+                    break;
+                default:
+                    replaceWith = value;
+                    break;
             }
+            return replaceWith;
         }
 
         /// <summary>

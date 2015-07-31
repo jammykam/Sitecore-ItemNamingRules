@@ -38,7 +38,7 @@ namespace Sitecore.Sharedsource.ItemNamingRules.Actions
             string itemName = ruleContext.Item.Name;
             List<Item> siblings = ruleContext.Item.Parent.GetChildren().Where(c => c.ID != ruleContext.Item.ID).ToList();
 
-            while (siblings.Any(s => s.Name == itemName))
+            while (siblings.Any(s => s.Name.Equals(itemName, StringComparison.OrdinalIgnoreCase)))
             {
                 itemName = String.Format("{0}-{1}", ruleContext.Item.Name, sequence++);
             }
