@@ -2,8 +2,8 @@
 version: 1
 id: {ACB122E0-812F-4CCF-A341-B069017DBC7B}
 database: master
-path: /sitecore/system/Settings/Rules/Item Saved/Rules/Media Item Name
-parent: {86E2276A-437F-492F-B1B9-CEDBB3B9DA88}
+path: /sitecore/system/Settings/Rules/Item Saving/Rules/Media Item Name
+parent: {2F0D793D-3C8D-4B2B-A8FD-AC08C6758108}
 name: Media Item Name
 master: {00000000-0000-0000-0000-000000000000}
 template: {D9BDF22F-6E17-47F3-AB64-49C717BA92DA}
@@ -13,7 +13,7 @@ templatekey: Rule
 field: {908EF45D-4940-4B6A-857D-3739BA4ACF8F}
 name: Rule
 key: rule
-content-length: 671
+content-length: 570
 
 <ruleset>
   <rule uid="{7AE76A4F-A933-4643-AC0E-139F21D4FB50}">
@@ -23,7 +23,6 @@ content-length: 671
     <actions>
       <action id="{97EDDE8D-778C-4657-89F4-BD71F8DC9166}" uid="8D1A7C0B23CE4143995FC2E0786A4232" MatchPattern="[^0-9a-zA-Z]+" ReplaceWith="-" />
       <action id="{A636CD38-32AD-4762-9434-E5932FE250F5}" uid="614D75914800495AA2AD215274D34867" MaxLength="100" />
-      <action id="{B645C552-2BCF-45EB-9F4B-E2259C239084}" uid="B05A7D1F6253426787077D0857AB6723" />
     </actions>
   </rule>
 </ruleset>
@@ -37,7 +36,7 @@ content-length: 2
 ----version----
 language: en
 version: 1
-revision: a40a1a84-6c12-40dd-8b03-b060f93d858d
+revision: 0601e520-dbc7-4f2b-be63-2502379905cf
 
 ----field----
 field: {45CF9130-802A-41BE-B3EB-C02F657DCC2E}
@@ -50,9 +49,9 @@ Item Name
 field: {B8F42732-9CB8-478D-AE95-07E25345FB0F}
 name: __Hide version
 key: __hide version
-content-length: 1
+content-length: 0
 
-1
+
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
@@ -66,14 +65,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-a40a1a84-6c12-40dd-8b03-b060f93d858d
+0601e520-dbc7-4f2b-be63-2502379905cf
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
-content-length: 35
+content-length: 34
 
-20150712T011257:635722603772159826Z
+20170122T215350:636207188302714344
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
@@ -81,3 +80,10 @@ key: __updated by
 content-length: 14
 
 sitecore\admin
+----field----
+field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
+name: __Lock
+key: __lock
+content-length: 5
+
+<r />

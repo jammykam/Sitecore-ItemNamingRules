@@ -11,6 +11,7 @@
 // <url>http://marketplace.sitecore.net/en/Modules/Item_Naming_rules.aspx</url>
 //-----------------------------------------------------------------------------------
 
+using Sitecore.Data.Items;
 using Sitecore.Rules;
 using Sitecore.Rules.Actions;
 
@@ -28,7 +29,21 @@ namespace Sitecore.Sharedsource.ItemNamingRules.Actions
         /// <param name="ruleContext">The rule context.</param>
         public override void Apply(T ruleContext)
         {
-            ruleContext.Item.Appearance.DisplayName = ruleContext.Item.Name;
+            // Update the display name if user has renamed the itemed
+            if (ItemRenamed(ruleContext.Item))
+            {
+                ruleContext.Item.Appearance.DisplayName = ruleContext.Item.Name;
+            }
+        }
+
+        /// <summary>
+        /// Try to detect if the user has renamed the item
+        /// </summary>
+        /// <param name="item">The item being edited</param>
+        /// <returns>Whether item rename occured</returns>
+        private bool ItemRenamed(Item item)
+        {
+            return (item.Appearance.DisplayName == item.Name || item.Name != item.InnerData.Definition.Name);
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -28,24 +29,19 @@
     <DebugSymbols>true</DebugSymbols>
     <OutputPath>.\bin\Debug\</OutputPath>
     <RecursiveDeployAction>Ignore</RecursiveDeployAction>
-    <SitecoreDeployFolder>
-    </SitecoreDeployFolder>
-    <SitecoreWebUrl>
-    </SitecoreWebUrl>
-    <SitecoreAccessGuid>
-    </SitecoreAccessGuid>
-    <InstallSitecoreConnector>False</InstallSitecoreConnector>
-    <DisableFileDeployment>False</DisableFileDeployment>
+    <SitecoreDeployFolder>C:\inetpub\wwwroot\sc72rev151021\Website</SitecoreDeployFolder>
+    <SitecoreWebUrl>http://sc72rev151021</SitecoreWebUrl>
+    <SitecoreAccessGuid>8dd5cf55-5958-4dc4-af58-6cb9cacbec71</SitecoreAccessGuid>
+    <InstallSitecoreConnector>True</InstallSitecoreConnector>
+    <DisableFileDeployment>True</DisableFileDeployment>
     <PackageName>ItemNamingRules.Sitecore.Master</PackageName>
     <GeneratePackage>True</GeneratePackage>
     <SeperateFilesAndItems>False</SeperateFilesAndItems>
-    <PackageExcludeCode>True</PackageExcludeCode>
+    <PackageExcludeCode>False</PackageExcludeCode>
     <AddDateTimeToPackageName>False</AddDateTimeToPackageName>
     <PackageAuthor>Kamruz Jaman</PackageAuthor>
     <PackagePublisher>Sitecore Shared Source Module</PackagePublisher>
     <PackageReadme>The ItemNamingRules project provides conditions and actions for the rules engine to automate item name conventions. You can use the ItemNamingRules project to apply different item naming rules in different branches of the content tree. For more information about the rules engine, see the Rules Engine Cookbook.
-
-Ensure you have deployed "Sitecore.Sharedsource.ItemNamingRules.dll" to your /bin directory otherwise installation of the package will fail.
 
 https://github.com/jammykam/Sitecore-ItemNamingRules
 http://wp.me/p2SmN4-71</PackageReadme>
@@ -70,15 +66,13 @@ http://wp.me/p2SmN4-71</PackageReadme>
     <PackageVersion>1.0.0</PackageVersion>
     <PackageReadme>The ItemNamingRules project provides conditions and actions for the rules engine to automate item name conventions. You can use the ItemNamingRules project to apply different item naming rules in different branches of the content tree. For more information about the rules engine, see the Rules Engine Cookbook.
 
-Ensure you have deployed "Sitecore.Sharedsource.ItemNamingRules.dll" to your /bin directory otherwise installation of the package will fail.
-
 https://github.com/jammykam/Sitecore-ItemNamingRules
 http://wp.me/p2SmN4-71</PackageReadme>
     <SitecoreAssemblyPath>..\..\lib\</SitecoreAssemblyPath>
     <GeneratePackage>True</GeneratePackage>
     <SeperateFilesAndItems>False</SeperateFilesAndItems>
     <AddDateTimeToPackageName>False</AddDateTimeToPackageName>
-    <PackageExcludeCode>True</PackageExcludeCode>
+    <PackageExcludeCode>False</PackageExcludeCode>
     <PackageName>ItemNamingRules.Sitecore.Master</PackageName>
     <EnableValidations>False</EnableValidations>
     <ValidationSettingsFilePath>.\Sitecore.Master_Release.xml</ValidationSettingsFilePath>
@@ -92,18 +86,27 @@ http://wp.me/p2SmN4-71</PackageReadme>
     </AssemblyAttributes>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ItemNamingRules\ItemNamingRules.csproj">
+      <Project>{eaeb63b0-f73d-45ce-93ed-8be129fa3e99}</Project>
+      <Name>ItemNamingRules</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ExcludedAssemblies Include="Sitecore.Kernel.dll" />
+    <ExcludedAssemblies Include="Sitecore.Logging.dll" />
+    <ExcludedAssemblies Include="Sitecore.Update.dll" />
+    <ExcludedAssemblies Include="Sitecore.Zip.dll" />
+  </ItemGroup>
+  <ItemGroup>
     <SitecoreItem Include="sitecore\system.item">
-      <Icon>/temp/IconCache/People/16x16/workstation1.png</Icon>
       <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
       <ItemDeployment>DeployOnce</ItemDeployment>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\system\Settings.item">
-      <Icon>/temp/IconCache/Applications/16x16/preferences.png</Icon>
       <ItemDeployment>DeployOnce</ItemDeployment>
       <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\system\Settings\Rules.item">
-      <Icon>/temp/IconCache/Applications/16x16/folder.png</Icon>
       <ItemDeployment>DeployOnce</ItemDeployment>
       <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
@@ -147,10 +150,6 @@ http://wp.me/p2SmN4-71</PackageReadme>
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\system\Settings\Rules\Definitions\Elements\Item Naming\Save Name Changes.item">
-      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
-      <ItemDeployment>AlwaysUpdate</ItemDeployment>
-    </SitecoreItem>
     <SitecoreItem Include="sitecore\system\Settings\Rules\Definitions\Elements\Item Naming\Store Pretty Name in Display Name.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
@@ -183,44 +182,36 @@ http://wp.me/p2SmN4-71</PackageReadme>
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\system\Settings\Rules\Item Saved.item">
-      <ItemDeployment>DeployOnce</ItemDeployment>
-      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
-    </SitecoreItem>
-    <SitecoreItem Include="sitecore\system\Settings\Rules\Item Saved\Rules.item">
+    <SitecoreItem Include="sitecore\system\Settings\Rules\Item Saving.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
-      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\system\Settings\Rules\Item Saved\Rules\Item Name.item">
+    <SitecoreItem Include="sitecore\system\Settings\Rules\Item Saving\Rules.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
-      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\system\Settings\Rules\Item Saved\Rules\Media Item Name.item">
+    <SitecoreItem Include="sitecore\system\Settings\Rules\Item Saving\Rules\Item Name.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
-      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\system\Settings\Rules\Item Saved\Tags.item">
-      <ItemDeployment>DeployOnce</ItemDeployment>
-      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
-    </SitecoreItem>
-    <SitecoreItem Include="sitecore\system\Settings\Rules\Item Saved\Tags\Item Naming.item">
+    <SitecoreItem Include="sitecore\system\Settings\Rules\Item Saving\Rules\Media Item Name.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
-      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Rules\Item Saving\Tags.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Rules\Item Saving\Tags\Default.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Rules\Item Saving\Tags\Item Naming.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ItemNamingRules\ItemNamingRules.csproj">
-      <Project>{eaeb63b0-f73d-45ce-93ed-8be129fa3e99}</Project>
-      <Name>ItemNamingRules</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <ExcludedAssemblies Include="Sitecore.Kernel.dll" />
-    <ExcludedAssemblies Include="Sitecore.Logging.dll" />
-    <ExcludedAssemblies Include="Sitecore.Update.dll" />
-    <ExcludedAssemblies Include="Sitecore.Zip.dll" />
-  </ItemGroup>
-  <Import Project="$(MSBuildExtensionsPath)\HedgehogDevelopment\SitecoreProject\v9.0\HedgehogDevelopment.SitecoreProject.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\HedgehogDevelopment\SitecoreProject\v9.0\HedgehogDevelopment.SitecoreProject.targets" Condition="Exists('$(MSBuildExtensionsPath)\HedgehogDevelopment\SitecoreProject\v9.0\HedgehogDevelopment.SitecoreProject.targets')" />
   <!-- After the package is generated, copy it up to the /trunk/release directory -->
   <Target Name="AfterGeneratePackage" Condition=" '$(Configuration)' == 'Release' ">
     <PropertyGroup>
